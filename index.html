@@ -102,5 +102,42 @@
         <div class="photo-name">이름</div>
       </div>
     </div>
+    <script>
+      //  rapidapi 가입 및 Tasty api 구독하기
+      // https://rapidapi.com/apidojo/api/tasty/ 에 api 사용 예제 보기
+      const options = {
+        method: "GET",
+        url: "https://tasty.p.rapidapi.com/recipes/list",
+        params: { from: "0", size: "20", tags: "under_30_minutes" },
+        headers: {
+          "x-rapidapi-host": "tasty.p.rapidapi.com",
+          "x-rapidapi-key": "31276411cfmsh0efd07dc2760712p136b67jsnbcdc93b074f2"
+        }
+      }
+      fetch("https://tasty.p.rapidapi.com/recipes/list", options)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data)
+          const { results } = data
+          console.log(results)
+          const photoList = document.getElementById("photo-list")
+          results.forEach(recipe => {
+            const thumbnail = document.createElement("img")
+            const photocard = document.createElement("div")
+            const photoname = document.createElement("div")
+            const photocontainer = document.createElement("div")
+
+            thumbnail.src = recipe.thumbnail_url
+            photocard.className = "photo-card"
+            photoname.className = "photo-name"
+            photoname.innerText = recipe.name
+            photocontainer.className = "photo-container"
+
+            photocard.appendChild(thumbnail)
+            photocontainer.append(photocard, photoname)
+            photoList.appendChild(photocontainer)
+          })
+        })
+    </script>
   </body>
 </html>
