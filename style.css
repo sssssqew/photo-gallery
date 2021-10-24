@@ -2,6 +2,50 @@ body {
   margin: 0;
   padding: 0;
 }
+#nav {
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 4px 10px 2px gray;
+  background: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+#screen-mode {
+  background: skyblue;
+  margin-right: 50px;
+  width: 100px;
+  height: 35px;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#circle-btn {
+  background: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+#profile {
+  background: tomato;
+  margin-right: 100px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+#profile img {
+  width: 100%;
+  height: 100%;
+}
+
 #header {
   width: 100%;
   height: 200px;
