@@ -151,6 +151,21 @@ h1 {
 }
 
 /* 반응형 적용 */
+@media screen and (max-width: 1030px) {
+  #search {
+    margin-top: 50px;
+  }
+  #search input {
+    width: 500px;
+  }
+  #profile-menu {
+    margin-right: 40px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+}
+
 @media screen and (max-width: 940px) {
   /* 2개의 컬럼 */
   #photo-list {
@@ -166,21 +181,6 @@ h1 {
   }
   .photo-container:nth-child(2n + 1) {
     margin-right: 2%;
-  }
-}
-
-@media screen and (max-width: 1030px) {
-  #search {
-    margin-top: 50px;
-  }
-  #search input {
-    width: 500px;
-  }
-  #profile-menu {
-    margin-right: 40px;
-  }
-  h1 {
-    font-size: 60px;
   }
 }
 
