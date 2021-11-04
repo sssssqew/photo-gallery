@@ -19,6 +19,26 @@ html {
   top: 0;
 }
 
+/* 햄버거 메뉴 */
+#menu{
+  width: 50px;
+  height: 50px;
+  /* background: tomato; */
+  margin-right: auto;
+  margin-left: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+#menu:hover{
+  transform: rotate(45deg);
+}
+.bar{
+  width: 80%;
+  height: 10px;
+  background: black;
+  margin: 5px auto;
+}
+
 /* 스크린 모드 */
 #screen-mode {
   background: skyblue;
