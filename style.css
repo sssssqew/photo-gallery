@@ -75,7 +75,7 @@ html {
   height: 100%;
 }
 
-#header {
+#title {
   width: 100%;
   height: 200px;
   margin-top: 100px;
@@ -170,6 +170,65 @@ h1 {
   line-height: 100px;
 }
 
+/* 모달창 */
+.modal-window{
+  width: 40%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: palegoldenrod;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px 15px gray;
+
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  text-align: center;
+}
+.hide{
+  display: none;
+}
+#header, #footer{
+  background: lightsalmon;
+}
+#header{
+  height: 70px;
+  line-height: 70px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+#body{
+  flex-grow: 1;
+  border-top: 5px solid rosybrown;
+  border-bottom: 5px solid rosybrown;
+  padding: 30px;
+  text-align: left;
+}
+#footer{
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#footer button{
+  all: unset;
+  width: 70px;
+  height: 50px;
+  margin-right: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  background: cornflowerblue;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+}
+#footer button:hover{
+  opacity: 0.8;
+}
+
+
 /* 반응형 적용 */
 @media screen and (max-width: 1030px) {
   #search {
@@ -184,8 +243,26 @@ h1 {
   h1 {
     font-size: 60px;
   }
+  /* 모달창  */
+  .modal-window{
+    width: 80%;
+    text-align: center;
+  }
+  #body{
+      height: 300px;
+      overflow: scroll;
+  }
 }
 
+@media screen and (max-width: 1100px){
+  .modal-window {
+    width: 60%;
+    text-align: center;
+  }
+  #body{
+    font-size: 1.5rem;
+  }
+}
 @media screen and (max-width: 940px) {
   /* 2개의 컬럼 */
   #photo-list {
@@ -228,6 +305,18 @@ h1 {
   }
   h1 {
     font-size: 40px;
+  }
+  /* 모달창 */
+  #modal-window{
+    width: 80%;
+  }
+  #body{
+      height: 150px;
+      overflow: scroll;
+  }
+  .modal-window{
+    width: 70%;
+    text-align: center;
   }
 }
 
@@ -300,6 +389,15 @@ h1 {
     width: 50%;
     margin: 0 auto;
   }
+  .modal-window{
+      width: 80%;
+      text-align: center;
+  }
+  #body{
+      height: 150px;
+      overflow: scroll;
+      padding: 15px;
+  }
 }
 @media screen and (max-width: 380px) {
   /* 1개의 컬럼 - 너비 조절 */
@@ -330,6 +428,10 @@ h1 {
     width: 60%;
     margin: 0 auto;
   }
+  .modal-window{
+    width: 80%;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 290px) {
   #screen-mode {
@@ -344,5 +446,9 @@ h1 {
   h4 {
     width: 60%;
     margin: 0 auto;
+  }
+  .modal-window{
+    width: 80%;
+    text-align: center;
   }
 }
